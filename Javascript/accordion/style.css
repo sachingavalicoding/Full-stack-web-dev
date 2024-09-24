@@ -20,7 +20,9 @@ body{
 main{
     margin: 0px auto;
     max-width: 50rem;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
 }
 
 .main__heading{
@@ -28,4 +30,13 @@ main{
     font-weight: 400;
     text-align: center;
     padding: 3rem 0rem;
+}
+.accordion__item{
+    padding: 1px 3px;
+}
+.accordion__title{
+    color: black;
+}
+.accordion__content{
+    color: white;
 }

@@ -31,3 +31,26 @@ const questions = [
   },
 ];
 
+const accordionBox = document.querySelector(".accordion__container");
+
+function displayAccordionData() {
+  accordionBox.innerHTML = questions
+    .map((element) => {
+      return `
+   <div  class= "accordion__item" >
+     <div class="accordion__title" >
+      <p>
+          ${element.question}
+     </p>
+     <i class="fa-solid fa-arrow-up-from-bracket"></i>
+     </div>
+     <div class="accordion__content" >
+       <p> ${element.answer} </p>
+     </div>
+   </div>
+  `;
+    })
+    .join("");
+}
+
+displayAccordionData();
