@@ -1,9 +1,13 @@
 const express = require("express");
+const { home, signup } = require("../controllers/auth-controller");
 
 const router = express.Router();
 
-router.get("/" , (req , res) => {
-    res.status(200).send(" Welcome to my Youtube channal guys ! ");
-})
+router.get("/", home)
+router.get("/signup" , signup);
+
+router.route("/signin").get((req, res) => {
+  res.status(200).send(" SIGN IN PAGE ");
+});
 
 module.exports = router;
