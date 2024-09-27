@@ -6,7 +6,7 @@ const router = express.Router();
 router.get("/", home)
 router.get("/signup" , signup);
 
-router.route("/signin").get((req, res) => {
+router.route("/signin").post((req, res) => {
   res.status(200).send(" SIGN IN PAGE ");
 });
 
